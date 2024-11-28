@@ -1,0 +1,21 @@
+{
+  "name": "mcs-6-advanced-js",
+  "version": "1.0.0",
+  "description": "1. Розберемо:",
+  "main": "index.js",
+  "scripts": {
+    "autoprefixer": "npx postcss src/css/styles.css --use autoprefixer -d dist/css/",
+    "minifyCss": "npx postcss dist/css/styles.css > dist/css/styles.min.css",
+    "buildCss": "npm run autoprefixer && npm run minifyCss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0"
+  },
+  "browserslist": "< 0.5%"
+}
