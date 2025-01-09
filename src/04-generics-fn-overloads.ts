@@ -17,32 +17,11 @@
 // console.log(result3); // 30.4
 // console.log(result4); // '2030'
 
-//? =================================
-// function merge(arr1, arr2) {}
-
-// const result1 = merge([1, 2], [3, 4]);
-// const result2 = merge(['1', '2'], ['3', '4']);
-
-// console.log(result1); // [1, 2, 3, 4]
-// console.log(result2); // ['1', '2', '3', '4']
-
 //* Generics
-//? =================================
-// function merge(arr1, arr2) {
-//   const result = [...arr1, ...arr2];
-
-//   return result;
-// }
-
-// const result1 = merge([1, 2], [3, 4]); // [1, 2, 3, 4]
-// const result2 = merge(['1', '2'], ['3', '4']); // [1, 2, 3, 4]
-
-// console.log(result1); // [1, 2, 3, 4]
-// console.log(result2); // ['1', '2', '3', '4']
-
 /*
-? Реалізуйте дженерик last(), який витягує останній елемент з масиву.
+? Реалізуйте дженерик last(items), який повертає останній елемент масиву.
 */
+// function last(items) {}
 
 // const result1 = last([3, 2]);
 // const result2 = last(['hello', 'world']);
@@ -87,6 +66,13 @@
 /*
 ? Реалізуйте функцію updateData(data, dataForUpdate), яка буде оновлюваті данні.
 */
+
+// function updateData<T extends object>(data: T, dataForUpdate: Partial<T>): T {
+//   return {
+//     ...data,
+//     ...dataForUpdate,
+//   };
+// }
 
 // const result1 = updateData(
 //   {

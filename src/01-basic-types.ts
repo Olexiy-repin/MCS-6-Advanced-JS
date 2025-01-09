@@ -18,7 +18,7 @@
 // let notValue: undefined = undefined;
 
 //* Типізація параметрів функції:
-// function showMessage(firstName, lastName, age) {
+// function showMessage(firstName: string, lastName: string, age: number) {
 //   console.log(`${firstName} ${lastName} is ${age} years old.`);
 // }
 
@@ -27,7 +27,9 @@
 //* Складні типи:
 //* object
 
-// function showBookInfo(book) {
+// type Book = { title: string; description: string; rating: number };
+
+// function showBookInfo(book: Book) {
 //   console.group('Book info:');
 //   console.log(`Title: ${book.title}`);
 //   console.log(`Description: ${book.description}`);
@@ -41,16 +43,22 @@
 //   rating: 9,
 // };
 
+// showBookInfo(bookJS);
+
 // const bookHTML = {
 //   title: 'HTML',
 //   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, illo.',
 //   rating: 8.5,
 // };
 
-//* array
-// const temperature = [10, 15, 12.5, 13];
+// showBookInfo(bookHTML);
 
-// const property = ['rating', 10];
+//* array
+// const temperature: number[] = [10, 15, 12.5, 13];
+
+// const property: (string | number)[] = ['rating', 10];
+
+// type Book = { title: string; description: string; rating: number };
 
 // const books = [
 //   {
@@ -70,7 +78,7 @@
 //   },
 // ];
 
-// function getBooksTitles(books) {
+// function getBooksTitles(books: Book[]) {
 //   return books.map(book => book.title);
 // }
 

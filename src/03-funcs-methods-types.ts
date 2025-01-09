@@ -8,6 +8,14 @@
 
 //* Return Type
 
+// function sum(a: number, b: number): number {
+//   return a + b;
+// }
+
+// const result = sum(10, 20);
+
+// console.log(result);
+
 /*
 ? Реалізуйте функцію getBooksTitles(books),
 ? яка буде приймати до параметру books масив книг,
@@ -37,13 +45,15 @@
 //   },
 // ];
 
-// const getBooksTitles = function (books) {};
+// const getBooksTitles = function (books: Book[]): string[] {
+//   return books.map(el => el.title);
+// };
 
 // console.log(getBooksTitles(books));
 
 //* Void
 
-// function greet(firstName, lastName) {
+// function greet(firstName: string, lastName: string): void {
 //   console.log(`Welcome ${firstName} ${lastName}`);
 // }
 
@@ -51,7 +61,7 @@
 
 //* Never
 
-// function generateError(message: string) {
+// function generateError(message: string): never {
 //   throw new Error(message);
 // }
 
@@ -64,7 +74,7 @@
 //* Function Type
 // type NumbersMapCB = (el: number, i: number, arr: number[]) => number;
 
-// function numbersMap(items: number[], cb: NumbersMapCB): number[] {
+// function numbersMap(items: number[], cb: NumbersMapCB) {
 //   const newArr: number[] = [];
 
 //   for (let i = 0; i < items.length; i++) {
@@ -81,8 +91,16 @@
 // console.log(result);
 
 //* Optional parameters
-// const greetUser = (firstName, lastName) => {};
+const greetUser = (firstName?: string, lastName?: string): void => {
+  if (firstName && lastName) {
+    console.log(`Welcome ${firstName} ${lastName}`);
+  } else if (firstName) {
+    console.log(`Welcome ${firstName}`);
+  } else {
+    console.log(`Welcome anonymus`);
+  }
+};
 
-// greetUser();
-// greetUser('Oleksii');
-// greetUser('Oleksii', 'Repin');
+greetUser('Oleksii', 'Repin');
+greetUser('Oleksii');
+greetUser();
